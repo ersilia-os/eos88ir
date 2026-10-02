@@ -2,12 +2,12 @@ Identifier: eos88ir
 Slug: chemical-dice-embeddings
 Status: In progress
 Title: Chemical Dice Molecular Embeddings
-Description: Embeds a molecule as an 8192-dimensional vector from its SMILES alone.
-  The authors fused six views of each molecule (descriptors, graph, image,
-  bioactivity, quantum and language features) into a teacher embedding and
-  trained a Mamba state-space model on about 2.2 million ChEMBL compounds to
+Description: Embeds a molecule as an 8192-dimensional vector from its SMILES 
+  alone. The authors fused six views of each molecule (descriptors, graph, 
+  image, bioactivity, quantum and language features) into a teacher embedding 
+  and trained a Mamba state-space model on about 2.2 million ChEMBL compounds to
   predict it. A classifier built on the embedding prioritised two compounds that
-  reduced hydroxyurea-induced DNA damage in yeast. Ersilia canonicalises SMILES
+  reduced hydroxyurea-induced DNA damage in yeast. Ersilia canonicalises SMILES 
   first; inputs beyond 126 tokens are truncated.
 Deployment:
   - Local
@@ -22,7 +22,7 @@ Output:
   - Value
 Output Dimension: 8192
 Output Consistency: Fixed
-Interpretation: 8192-dimensional molecular embedding distilled from six fused
+Interpretation: 8192-dimensional molecular embedding distilled from six fused 
   molecular views; individual dimensions have no direct meaning.
 Tag:
   - Embedding
@@ -38,3 +38,4 @@ Publication: https://doi.org/10.1038/s41467-026-77700-z
 Source Code: https://github.com/the-ahuja-lab/ChemicalDice
 License: MIT
 Contributor: TiagoJanela
+Incorporation Date: '2026-10-01'
