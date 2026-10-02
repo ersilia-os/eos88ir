@@ -2,44 +2,37 @@ Identifier: eos88ir
 Slug: chemical-dice-embeddings
 Status: In progress
 Title: Chemical Dice Molecular Embeddings
-Description: Embeds a molecule as an 8192-dimensional vector computed from its 
-  SMILES alone. The authors fused six views of each molecule (Mordred 
-  descriptors, GROVER graph features, ImageMol images, Signaturizer bioactivity 
-  signatures, MOPAC quantum properties and ChemBERTa language features) into a 
-  teacher embedding, then trained a Mamba state-space model on about 2.2 million
-  ChEMBL molecules to predict it, so only the SMILES is needed. SMILES longer 
-  than 128 tokens are truncated.
+Description: Embeds a molecule as an 8192-dimensional vector from its SMILES alone.
+  The authors fused six views of each molecule (descriptors, graph, image,
+  bioactivity, quantum and language features) into a teacher embedding and
+  trained a Mamba state-space model on about 2.2 million ChEMBL compounds to
+  predict it. A classifier built on the embedding prioritised two compounds that
+  reduced hydroxyurea-induced DNA damage in yeast. Ersilia canonicalises SMILES
+  first; inputs beyond 126 tokens are truncated.
 Deployment:
   - Local
-  - Online
-Source: Local, Online
-Source Type: Internal, Replicated, External
-Task: Annotation, Representation, Sampling
-Subtask: Property calculation or prediction, Activity prediction, Featurization,
-  Projection, Similarity search, Generation
+Source: Local
+Source Type: External
+Task: Representation
+Subtask: Featurization
 Input:
   - Compound
 Input Dimension: 1
 Output:
   - Value
-  - Score
-  - Compound
-  - Text
-Output Dimension: 1
-Output Consistency: Fixed, Variable
-Interpretation: The output of this template model should be interpreted like 
-  this.
+Output Dimension: 8192
+Output Consistency: Fixed
+Interpretation: 8192-dimensional molecular embedding distilled from six fused
+  molecular views; individual dimensions have no direct meaning.
 Tag:
   - Embedding
   - Chemical language model
   - ChEMBL
 Biomedical Area:
-  - Biomedical Area 1
-  - Biomedical Area 2
+  - Any
 Target Organism:
-  - Target Organism 1
-  - Target Organism 2
-Publication Type: Peer reviewed, Preprint, Other
+  - Any
+Publication Type: Peer reviewed
 Publication Year: 2026
 Publication: https://doi.org/10.1038/s41467-026-77700-z
 Source Code: https://github.com/the-ahuja-lab/ChemicalDice
