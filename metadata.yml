@@ -40,7 +40,7 @@ License: MIT
 Contributor: TiagoJanela
 Incorporation Date: '2026-10-01'
 Last Packaging Date: '2026-10-02'
-Release: v1.0.0
+Release: v1.0.1
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos88ir.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos88ir
 Docker Architecture:
