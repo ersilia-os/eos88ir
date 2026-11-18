@@ -2,7 +2,8 @@
 
 Embeds a molecule as an 8192-dimensional vector from its SMILES alone. The authors fused six views of each molecule (descriptors, graph, image, bioactivity, quantum and language features) into a teacher embedding and trained a Mamba state-space model on about 2.2 million ChEMBL compounds to predict it. A classifier built on the embedding prioritised two compounds that reduced hydroxyurea-induced DNA damage in yeast. Ersilia canonicalises SMILES first; inputs beyond 126 tokens are truncated.
 
-This model was incorporated on 2026-10-01.Last packaged on 2026-10-02.
+This model was incorporated on 2026-10-01.
+Last packaged on 2026-10-02.
 
 ## Information
 ### Identifiers
@@ -46,6 +47,7 @@ _10 of 8192 columns are shown_
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos88ir](https://hub.docker.com/r/ersiliaos/eos88ir)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos88ir.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos88ir.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos88ir_v1.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos88ir_v1.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `389`
